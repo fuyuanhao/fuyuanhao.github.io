@@ -1,0 +1,11 @@
+#container{
+	/*最大宽度980*/
+	max-width:980px;
+	/*宽度100%*/
+	width:100%;
+	/*无边界，自动调整*/
+	margin: 0 auto;
+	/*相对位置*/
+	height:640px;
+	overflow:hidden;
+}

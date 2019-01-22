@@ -1,0 +1,27 @@
+/*对图片及文字整体进行设置*/
+.image{
+width: 470px;
+height: auto;
+float: left;
+margin: 5px;
+text-align: center;
+}
+/*对图片进行设置*/
+img{
+width: 300px;
+height: 300px;
+margin: 5px;
+}
+/*对图片下的文字进行设置*/
+.text{
+font: 20px caption;
+margin-bottom: 10px;
+color:blueviolet;
+}
+/*实现鼠标处图片放大功能*/
+a:hover > img{
+transform: scale(1.5,1.5);
+-webkit-transition: .3s transform;
+-moz-transition: .3s transform;
+transition: .3s transform;
+}

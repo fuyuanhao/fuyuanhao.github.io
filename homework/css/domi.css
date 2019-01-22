@@ -1,0 +1,52 @@
+html,body{width: 100%;height: 100%;}
+/*背景图片*/
+.bg{display: table;width:100%;height: 100%; padding: 100px 0; text-align: center;color: #fff;background: url(../img/A2.jpg)no-repeat bottom center;background-color: #000;background-size: cover;}
+/*距顶部边距*/
+.my-navbar{padding:20px 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}
+/*导航栏初始颜色*/
+.my-navbar a{background: transparent !important;color:#fff !important}
+/*鼠标覆盖后颜色*/
+.my-navbar a:hover{color: #45BCF9 !important;background: transparent;outline:0}
+/*颜色改变时间*/
+.my-navbar a{transition:color 0.5s ease-in-out;}
+.top-nav{padding:0;background: #000;}
+/*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
+button.navbar-toggle{background-color:#fbfbfb;}
+button.navbar-toggle > span.icon-bar{background-color: #DEDEDE;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

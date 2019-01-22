@@ -1,0 +1,42 @@
+/*正文头部标题栏样式*/
+header{
+	background-image:url(../img/header.png) ;
+	height: 150px;
+	width: 980px;
+	color: brown;
+	font-size: 200%;
+	text-align: center;
+}
+
+
+/*导航栏整体样式*/
+nav{
+	/*无边界，自动调整*/
+	margin: 0 auto;
+	position:relative;
+	/*距离下面的部分宽度为2px*/
+	
+}
+/*导航内部*/
+ul{
+	/*去掉导航条上的小点*/
+	list-style: none;
+}	
+	/*导航子菜单样式*/
+nav li{
+	/*字体大小*/
+	font-size: 150%;
+	float: left;
+	padding: 0px 10px ;
+
+}
+/*导航中的子项中的a链接的样式*/
+nav li a{
+/*去掉链接的下划线*/
+text-decoration: none;
+color: cornflowerblue;
+}
+/*鼠标位于链接时的情况*/
+nav li a:hover{
+	color:white;
+}

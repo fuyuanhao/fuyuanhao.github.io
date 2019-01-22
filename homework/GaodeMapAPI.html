@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	
+	<head>
+    	<meta charset="utf-8">     	
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    	<link rel="icon" href="./img/logo.jpg" type="image/x-icon" />
+		<link rel="stylesheet" href="css/GaodeMapAPI.css" />
+    	<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    	<!--密钥-->
+    	<script type="text/javascript"
+            src="http://webapi.amap.com/maps?v=1.4.6&key=2a89a00b61758b9f5f141fbd9c47aed4&plugin=AMap.Autocomplete"></script>
+    	<script src="http://cache.amap.com/lbs/static/es5.min.js"></script>     
+    	<script type="text/javascript" src="js/GaodeMapAPI.js" ></script>
+    	<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    	<title>高德地图API学习</title>
+	</head>
+	
+	<body onload="init()">
+		<div id="container" class="map" tabindex="0"></div>
+		<div id="myPageTop">
+    		<table>
+        		<tr>
+            		<td>
+                		<label>按关键字搜索：</label>
+            		</td>
+            		<td class="column2">
+                		<label>左击获取经纬度：</label>
+            		</td>
+        		</tr>
+        		<tr>
+            		<td>
+                		<input type="text" placeholder="请输入关键字进行搜索" id="tipinput">
+            		</td>
+            		<td class="column2">
+                		<input type="text" readonly="true" id="lnglat">
+            		</td>
+        		</tr>
+    		</table>
+		</div>	
+	</body>
+	
+</html>
+
+

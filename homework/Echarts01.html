@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/echarts.js" ></script>
+		<title>Echarts</title>
+	</head>
+	<body>
+		 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    	<div id="main" style="width: 450px;height:250px;"></div>
+    	<script type="text/javascript">
+      	  // 基于准备好的dom，初始化echarts实例
+        	var myChart = echarts.init(document.getElementById('main'));
+      	  // 指定图表的配置项和数据
+       		var option = {
+            	title: {
+                	text: '临汾一中概况'
+            	},
+            	tooltip: {},
+            	legend: {
+                	data:['数量']
+            	},
+            	xAxis: {
+                	data: ["高一","高二","高三","任课老师"]
+            	},
+            	yAxis: {},
+            	series: [{
+                	name: '数据量',
+                	type: 'bar',
+                	data: [1500,1200,800,200]
+            	}]
+        	};
+        	// 使用刚指定的配置项和数据显示图表。
+        	myChart.setOption(option);
+    	</script>	
+	</body>
+</html>

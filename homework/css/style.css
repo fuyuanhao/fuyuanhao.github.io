@@ -1,0 +1,50 @@
+/*body里面所有内容的整体样式*/
+body{
+	/*背景图片*/
+	background-image:url(../img/background.jpg);
+	max-width: 980px;
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 0px 10px 10px 10px;
+	/*font-family: 'Source Sans Light', 'Apple LiSung Light', 'STHeiti Light', 'SimSun', sans-serif;*/
+}
+
+/*正文头部标题栏样式*/
+header{
+	/*background-image:url(../img/header.png) ;*/
+	height: 80px;
+	width: 980px;
+	color: brown;
+	font-size: 200%;
+	text-align: center;
+}
+h1{color:blue;}
+h2{color:green;}
+h2,footer{
+	margin: 0 auto; text-align: center;
+}
+footer{
+	background-image: url(../img/footer.png);
+}
+/*分割线的设置*/
+hr{height:1px;border:none;border-top:1px dashed #0066CC;}
+/*“回到顶部”图标的设置*/
+#hddb{
+	width: 7%;
+	height: 7%;
+	text-align:center;
+}
+.my-navbar{padding:20px 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}
+/*导航栏初始颜色*/
+.my-navbar a{background: transparent !important;color:black !important}
+/*鼠标覆盖后颜色*/
+.my-navbar a:hover{color: #45BCF9 !important;background: transparent;outline:0}
+/*颜色改变时间*/
+.my-navbar a{transition:color 0.5s ease-in-out;}
+.top-nav{padding:0;background: white;}
+/*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
+button.navbar-toggle{background-color:#fbfbfb;}
+button.navbar-toggle > span.icon-bar{background-color: #DEDEDE;}
+
+
+
