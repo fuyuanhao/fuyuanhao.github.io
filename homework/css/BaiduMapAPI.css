@@ -1,11 +1,45 @@
-#baidumap{
-	/*最大宽度980*/
-	max-width:980px;
+#baidumap{	
+	max-width: 800px;
 	/*宽度100%*/
-	width:100%;
+	/*width:100%;*/
 	/*无边界，自动调整*/
 	margin: 0 auto;
 	/*相对位置*/
-	height:640px;
+	height: 640px;
 	overflow:hidden;
+}
+main{
+  float: right;
+  width: 70%;
+}
+.sidebar {
+  float: left;
+  margin-top: 1.875em;
+  width: 22%;
+}
+.query{
+	border:2px solid skyblue;
+	margin:20px 0 30px 0;
+	padding: 5px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	box-shadow: 4px 4px 5px 3px #999;
+	
+}
+legend{
+	font-size: 1.6em;
+	margin-bottom: 5px;
+}
+input,article{
+	font-size: 1.2em;
+}
+.input{
+	margin: 5px 0 5px 0;
+}
+
+.textblock{
+	
+}
+input[type="text"]{
+	width: 70%;
 }

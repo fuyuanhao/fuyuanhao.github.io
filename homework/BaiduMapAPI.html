@@ -15,6 +15,7 @@
 		<!--<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>-->
 		<!--添加弧线-->
 		<script type="text/javascript" src="http://api.map.baidu.com/library/CurveLine/1.5/src/CurveLine.min.js"></script>
+		
     	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>  
     	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
     	<!--mapv样式-->
@@ -24,93 +25,98 @@
 		<title>百度地图API学习</title>
 	</head>
 	<body onload="init()">
-		<header>
-		</header>
-		<nav class="navbar navbar-fixed-top my-navbar" role="navigation">  
-        	<div class="container-fluid">  
-            	<div class="navbar-header">  
-                	<button type="button" class="navbar-toggle" data-toggle="collapse"  data-target="#example-navbar-collapse">  
-                    	<span class="sr-only">切换导航</span>  
-                    	<span class="icon-bar"></span>  
-                    	<span class="icon-bar"></span>  
-                    	<span class="icon-bar"></span>  
-                	</button>  
-                	<a class="navbar-brand" href="http://www.runoob.com/">菜鸟教程</a>  
-            	</div>  
-            	<div class="collapse navbar-collapse" id="example-navbar-collapse">  
-                	<ul class="nav navbar-nav">        
-                    	<li><a href="domi.html">主页</a></li>  
-                    	<li><a href="music.html">乐器分类</a></li>
-                    	<li><a href="schedule.html">我的课程表</a></li>  
-                    	<li><a href="BaiduMapAPI.html">百度地图API</a></li>  
-                    	<li><a href="GaodeMapAPI.html">高德地图API</a></li>  
-                    	<li><a href="OpenLayers.html">OpenLayers</a></li>  
-                    	 <li><a href="QRCode.html">二维码</a></li>
-                	</ul>  
-            	</div>  
-        	</div>  
-    	</nav>  
-		<div id="mainmap">
-			<fieldset>
-				<legend align="center">交通路线查询</legend>
-				<article id="querycontent">
-					<!--下拉菜单-->
-					<!--<select id="stylelist" onchange="changeMapStyle(this.value)"></select>-->
-					起点：<input type="text" id="tex_a" value="" /> 
-					终点：<input type="text" id="tex_b" value="" />
-					<input type="button" id="btn_WalkRouteQuery" value="步行规划" onclick="WalkRouteQuery()" />
-					<input type="button" id="btn_Driving" value="驾车路线" onclick="DrivingQuery()" />
-					<input type="button" id="btn_Bus" value="公交路线" onclick="BusQuery()" />
-				</article>
-			</fieldset>
-			<fieldset>
-				<legend align="center">我的学校</legend>
-				<article id="addsomemaker">
-					<!--input 增加  type 类型：按钮 id用于后续控制 value 显示的字符 onclick 点击后调用函数-->
-					<input type="button" id="btn_primary" value="小学" onclick="addPrimary()"  />
-					<input type="button" id="btn_junior" value="初中" onclick="addJuniormiddle()" />
-					<input type="button" id="btn_high" value="高中" onclick="addSeniormiddle()" />
-					<input type="button" id="btn_university" value="大学" onclick="addUniversity()" />
-					<input type="button" id="btn_fullscreen" value="显示全部" onclick="fullscreen()" />
-				</article>
-			</fieldset>
-			<fieldset>
-				<legend align="center">检索</legend>
-				<article>
-					城市名：<input type="text" id="cityName" value="" />
-					检索名称：<input type="text" id="text_search" value="" />
-					<!--用一样的id,是不是和class一样的效果？-->
-					<input type="button" id="btn_search" value="检索" onclick="localsearch()" />
-					<input type="button" id="btn_search" value="检索分页显示结果" onclick="searchpage()" />
-				</article>
-			</fieldset>
-			<fieldset>
-				<legend align="center">mapv尝试</legend>
-				<article>
-					<input type="button" id="mapv1" value="mapv1" onclick="mapv1()"  />
-					<input type="button" id="mapv2" value="mapv2" onclick="mapv2()" />
-					<input type="button" id="mapv3" value="mapv3" onclick="mapv3()" />
-				</article>
-			</fieldset>
-			<!--地图部分-->
-			<section id="baidumap">
-				<p>
+		<div class= "page">
+			<header></header>
+			<nav class="navbar navbar-fixed-top my-navbar" role="navigation">  
+	            <div class="collapse navbar-collapse" id="example-navbar-collapse">  
+	                <ul class="nav navbar-nav">    
+	                    <li><a href="domi.html">Home</a></li>  
+	                    <li><a href="music.html">Music</a></li>
+	                    <li><a href="schedule.html">Courses</a></li>  
+	                    <li><a href="BaiduMapAPI.html">BaiduMap</a></li>  
+	                    <li><a href="GaodeMapAPI.html">GaodeMap</a></li>  
+	                    <li><a href="OpenLayers.html">OpenLayers</a></li>  
+	                </ul>  
+	            </div>   
+	    	</nav>  
+			<div class="container">
+				<main role="main">
+					<div id="mainmap">
 					
-				</p>
-			</section>
-			<!--呈现结果部分-->
-			<article id="r-result">
-				
-			</article>
-		</div>
-		<!--<div id="map"></div>-->
-    	<!--<canvas id="canvas"></canvas>--> 
-		<footer>
+					<!--地图部分-->
+					<section id="baidumap">
+						<p>
+							
+						</p>
+					</section>
+					<!--呈现结果部分-->
+					<article id="r-result">
+						
+					</article>
+				</div>
+				</main>
+				<div class="sidebar">
+					<div class="query">
+						<legend align="center">交通路线查询</legend>
+						<article id="querycontent">
+							<!--下拉菜单-->
+							<!--<select id="stylelist" onchange="changeMapStyle(this.value)"></select>-->
+							<div class="input">
+								<span class="textblock">起点：</span>
+								<input type="text" id="tex_a" value="" /> 
+							</div>
+							<div class="input">
+								<span class="textblock">终点：</span>
+								<input type="text" id="tex_b" value="" />
+							</div>
+							<input type="button" id="btn_WalkRouteQuery" value="步行规划" onclick="WalkRouteQuery()" />
+							<input type="button" id="btn_Driving" value="驾车路线" onclick="DrivingQuery()" />
+							<input type="button" id="btn_Bus" value="公交路线" onclick="BusQuery()" />
+						</article>
+					</div>
+					<div class="query">
+						<legend align="center">我的学校</legend>
+						<article id="addsomemaker">
+							<!--input 增加  type 类型：按钮 id用于后续控制 value 显示的字符 onclick 点击后调用函数-->
+							<input type="button" id="btn_primary" value="小学" onclick="addPrimary()"  />
+							<input type="button" id="btn_junior" value="初中" onclick="addJuniormiddle()" />
+							<input type="button" id="btn_high" value="高中" onclick="addSeniormiddle()" />
+							<input type="button" id="btn_university" value="大学" onclick="addUniversity()" />
+							<input type="button" id="btn_fullscreen" value="显示全部" onclick="fullscreen()" />
+						</article>
+					</div>
+					<div class="query">
+						<legend align="center">检索</legend>
+						<article>
+							<div class="input">
+								<span class="textblock">城市名：</span>
+								<input type="text" id="cityName" value="" />
+							</div>
+							<div class="input">							
+								<span class="textblock">检索名称：</span>
+								<input type="text" id="text_search" value="" />
+							</div>
+							<input type="button" id="btn_search" value="检索" onclick="localsearch()" />
+							<input type="button" id="btn_search" value="检索分页显示结果" onclick="searchpage()" />
+						</article>
+					</div>
+					<div class="query">
+						<legend align="center">mapv尝试</legend>
+						<article>
+							<input type="button" id="mapv1" value="mapv1" onclick="mapv1()"  />
+							<input type="button" id="mapv2" value="mapv2" onclick="mapv2()" />
+							<input type="button" id="mapv3" value="mapv3" onclick="mapv3()" />
+						</article>
+					</div>
+				</div>								
+			</div>
+			<!--<footer>
 			<a href="#top">
 				<img src="img/回到顶部.jpg" id="hddb" />
 			</a>
 			<p> 适用浏览器：FireFox、Chrome、Edge. 不支持IE8。 </p>
 			<p>Designed and developed by Fu Yuanhao.<br> Copyright © 2018 fuyuanhao. All Rights Reserved.</p>
-		</footer>
+			</footer>-->
+		</div>
 	</body>
 </html>

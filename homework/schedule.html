@@ -1,156 +1,141 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8">
 		<link rel="icon" href="./img/logo.jpg" type="image/x-icon" />
 		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/schedulestyle.css" />
+		<link rel="stylesheet" href="css/webfont.css" />
 		<script type="text/javascript" src="js/ScheduleClass.js" ></script>
+		<!--Echart-->
 		<script type="text/javascript" src="js/echarts.js" ></script>
+		<!--导航-->
     	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>  
     	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
 		<title>我的课程表</title>
 	</head>
 
 	<body onload="loadEcharts()">
-		<header>
-			<h2></h2>
-		</header>
+		<header></header>
+		<h1>Fuyuanhao</h1>
 		<nav class="navbar navbar-fixed-top my-navbar" role="navigation">  
-        <div class="container-fluid">  
-            <div class="navbar-header">  
-                <button type="button" class="navbar-toggle" data-toggle="collapse"  
-                        data-target="#example-navbar-collapse">  
-                    <span class="sr-only">切换导航</span>  
-                    <span class="icon-bar"></span>  
-                    <span class="icon-bar"></span>  
-                    <span class="icon-bar"></span>  
-                </button>  
-                <a class="navbar-brand" href="http://www.runoob.com/">菜鸟教程</a>  
-            </div>  
             <div class="collapse navbar-collapse" id="example-navbar-collapse">  
-                <ul class="nav navbar-nav">  
-                    
-                    <li><a href="domi.html">主页</a></li>  
-                    <li><a href="music.html">乐器分类</a></li>
-                    <li><a href="schedule.html">我的课程表</a></li>  
-                    <li><a href="BaiduMapAPI.html">百度地图API</a></li>  
-                    <li><a href="GaodeMapAPI.html">高德地图API</a></li>  
+                <ul class="nav navbar-nav">    
+                    <li><a href="domi.html">Home</a></li>  
+                    <li><a href="music.html">Music</a></li>
+                    <li><a href="schedule.html">Courses</a></li>  
+                    <li><a href="BaiduMapAPI.html">BaiduMap</a></li>  
+                    <li><a href="GaodeMapAPI.html">GaodeMap</a></li>  
                     <li><a href="OpenLayers.html">OpenLayers</a></li>  
                 </ul>  
-            </div>  
-        </div>  
-    </nav>  
+            </div>   
+   		</nav>  
 		<section id="content">
-			<article>
-				<p>
-					<table border=“1”>
-						<!--表头行-->
-						<tr>
-							<th>时间</th>
-							<th>星期一</th>
-							<th>星期二</th>
-							<th>星期三</th>
-							<th>星期四</th>
-							<th>星期五</th>
-							<th>星期六</th>
-							<th>星期日</th>
-						</tr>
-						<!--表格数据内容第1行-->
-						<tr>
-							<td>07:00-08:00</td>
-							<td colspan="7">起床、早餐</td>
-						</tr>
-						<tr>
-							<td>08:00-09:00</td>
-							<td rowspan="2">高数</td>
-							<td rowspan="2">概率论</td>
-							<td rowspan="2">高数</td>
-							<td rowspan="2">概率论</td>
-							<td rowspan="2">高数</td>
-							<td rowspan="2">锻炼</td>
-							<td rowspan="4">图书馆</td>
-						</tr>
-						<tr>
-							<td>09:00-10:00</td>
-						</tr>
-						<tr>
-							<td>10:00-11:00</td>
-							<td rowspan="2">English</td>
-							<td rowspan="2">近代史纲要</td>
-							<td rowspan="3">计算机网络</td>
-							<td rowspan="2">English</td>
-							<td rowspan="2">自然地理</td>
-							<td rowspan="3">做网页</td>
-						</tr>
-						<tr>
-							<td>11:00-12:00</td>
+	   		
+			<table border=“1”>
+				<!--表头行-->
+				<tr>
+					<th>时间</th>
+					<th>星期一</th>
+					<th>星期二</th>
+					<th>星期三</th>
+					<th>星期四</th>
+					<th>星期五</th>
+					<th>星期六</th>
+					<th>星期日</th>
+				</tr>
+				<!--表格数据内容第1行-->
+				<tr>
+					<td>07:00-08:00</td>
+					<td colspan="7">起床、早餐</td>
+				</tr>
+				<tr>
+					<td>08:00-09:00</td>
+					<td rowspan="2">高数</td>
+					<td rowspan="2">概率论</td>
+					<td rowspan="2">高数</td>
+					<td rowspan="2">概率论</td>
+					<td rowspan="2">高数</td>
+					<td rowspan="2">锻炼</td>
+					<td rowspan="4">图书馆</td>
+				</tr>
+				<tr>
+					<td>09:00-10:00</td>
+				</tr>
+				<tr>
+					<td>10:00-11:00</td>
+					<td rowspan="2">English</td>
+					<td rowspan="2">近代史纲要</td>
+					<td rowspan="3">计算机网络</td>
+					<td rowspan="2">English</td>
+					<td rowspan="2">自然地理</td>
+					<td rowspan="3">做网页</td>
+				</tr>
+				<tr>
+					<td>11:00-12:00</td>
 
-						</tr>
-						<tr>
-							<td>12:00-13:00</td>
-						</tr>
-						<tr>
-							<td>13:00-14:00</td>
-							<td colspan="7">午餐、午休</td>
-						</tr>
-						<tr>
-							<td>14:00-15:00</td>
-							<td rowspan="4">数据结构</td>
-							<td rowspan="2">体育</td>
-							<td rowspan="2">free</td>
-							<td rowspan="2">计算机网络</td>
-							<td rowspan="4">测量学实习</td>
-							<td rowspan="2">网课</td>
-							<td rowspan="2">闲逛</td>
-						</tr>
-						<tr>
-							<td>15:00-16:00</td>
-						</tr>
-						<tr>
-							<td>16:00-17:00</td>
-							<td rowspan="2">测量学</td>
-							<td rowspan="2">自然地理</td>
-							<td rowspan="2">free</td>
-							<td rowspan="2">洗衣服</td>
-							<td rowspan="2">free</td>
-						</tr>
-						<tr>
-							<td>17:00-18:00</td>
-						</tr>
-						<tr>
-							<td>18:00-19:00</td>
-							<td colspan="7">晚餐、散步</td>
-						</tr>
-						<tr>
-							<td>19:00-20:00</td>
-							<td rowspan="2">free</td>
-							<td rowspan="2">free</td>
-							<td rowspan="2">大学音乐</td>
-							<td rowspan="2">《红楼梦》</td>
-							<td rowspan="2">free</td>
-							<td rowspan="2">听音乐</td>
-							<td rowspan="2">班会</td>
-						</tr>
-						<tr>
-							<td>20:00-21:00</td>
-						</tr>
-						<tr>
-							<td>21:00-22:00</td>
-							<td colspan="7">回顾学习内容</td>
-						</tr>
-						<tr>
-							<td>22:00-23:00</td>
-							<td colspan="7">洗漱、睡觉</td>
-						</tr>
-					</table>
-				</p>
-			</article>	
-			<fieldset>
-			<legend align="center">计算器</legend>
-				<p id="computeDemo">
+				</tr>
+				<tr>
+					<td>12:00-13:00</td>
+				</tr>
+				<tr>
+					<td>13:00-14:00</td>
+					<td colspan="7">午餐、午休</td>
+				</tr>
+				<tr>
+					<td>14:00-15:00</td>
+					<td rowspan="4">数据结构</td>
+					<td rowspan="2">体育</td>
+					<td rowspan="2">free</td>
+					<td rowspan="2">计算机网络</td>
+					<td rowspan="4">测量学实习</td>
+					<td rowspan="2">网课</td>
+					<td rowspan="2">闲逛</td>
+				</tr>
+				<tr>
+					<td>15:00-16:00</td>
+				</tr>
+				<tr>
+					<td>16:00-17:00</td>
+					<td rowspan="2">测量学</td>
+					<td rowspan="2">自然地理</td>
+					<td rowspan="2">free</td>
+					<td rowspan="2">洗衣服</td>
+					<td rowspan="2">free</td>
+				</tr>
+				<tr>
+					<td>17:00-18:00</td>
+				</tr>
+				<tr>
+					<td>18:00-19:00</td>
+					<td colspan="7">晚餐、散步</td>
+				</tr>
+				<tr>
+					<td>19:00-20:00</td>
+					<td rowspan="2">free</td>
+					<td rowspan="2">free</td>
+					<td rowspan="2">大学音乐</td>
+					<td rowspan="2">《红楼梦》</td>
+					<td rowspan="2">free</td>
+					<td rowspan="2">听音乐</td>
+					<td rowspan="2">班会</td>
+				</tr>
+				<tr>
+					<td>20:00-21:00</td>
+				</tr>
+				<tr>
+					<td>21:00-22:00</td>
+					<td colspan="7">回顾学习内容</td>
+				</tr>
+				<tr>
+					<td>22:00-23:00</td>
+					<td colspan="7">洗漱、睡觉</td>
+				</tr>
+			</table>
+			<div class="circle">
+				<legend align="center">计算器</legend>
+				<p id="computeDemo" >
 					请输入数字：<input type="text" class="compute" id="txt_a" value=""/>	<!--txet输入框a-->
 					<!--定义下拉列表的选项-->
 					<select name="选择运算符" id="computeType">
@@ -167,13 +152,13 @@
 					<input type="button" id="btn_compute" value="点我进行计算" onclick="compute()" />	
 					<!--<input type="button" id="btn_loadEcharts" value="加载柱状图" onclick="loadEcharts()"/>-->
 				</p>
-			</fieldset>
+			</div>
+					
 		<article id="echartsTest" style="width:800px;height:400px;">
 
 		</article>
 		
 	</body>
-	<hr/>
 	<footer>
 			<a href="#top">
 				<img src="img/回到顶部.jpg" id="hddb" />

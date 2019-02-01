@@ -1,12 +1,33 @@
-table {
-	width: 800px;
-	background-image: ;
-	text-align: center;
-	margin-left: 8%;
+table{
+	font-size: 2em;
+	/*水平居中*/
+	margin: 0 auto;
+	text-align: center;	
 	background-image: url(../img/背景.png);
-	font-family: "arial", "times new roman";
+	/*font-family: "arial", "times new roman";*/
+}
+article{
+	margin: 30px auto;
+	text-align: center;	
+	border:2px solid skyblue;
+	padding: 5px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+}
+.circle{
+	margin: 20px auto;
+	text-align: center;
+	width: 600px;
+	height: auto;
+	border:2px solid sienna;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;	
 }
 
+h1{
+	font-size: 10em;
+	font-family: cac_champagneregular;
+}
 h2 {
 	color: blueviolet;
 }
@@ -52,9 +73,7 @@ select {
 	/*为下拉小箭头留出一点位置，避免被文字覆盖*/
 	padding-right: 14px;
 }
-
 /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
-
 select::-ms-expand {
 	display: none;
 }
