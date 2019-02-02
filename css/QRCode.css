@@ -1,6 +1,9 @@
 html {
 	background-color: #f3f3f3;
 }
+body{
+	height:720px;
+}
 
 footer a {
 	text-decoration: none;

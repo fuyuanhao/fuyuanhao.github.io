@@ -2,7 +2,7 @@ html,body{width: 100%;height: 100%;}
 /*背景图片*/
 .bg{display: table;width:100%;height: 100%; padding: 100px 0; text-align: center;color: #fff;background: url(../img/A2.jpg)no-repeat bottom center;background-color: #000;background-size: cover;}
 /*距顶部边距*/
-.my-navbar{padding:20px 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}
+.my-navbar{padding:0 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}
 /*导航栏初始颜色*/
 .my-navbar a{background: transparent !important;color:#fff !important}
 /*鼠标覆盖后颜色*/
